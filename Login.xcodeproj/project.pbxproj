@@ -22,7 +22,7 @@
 		C21C607C192E141100C3B7F6 /* img01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C21C6079192E141100C3B7F6 /* img01.jpg */; };
 		C21C607D192E141100C3B7F6 /* img02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C21C607A192E141100C3B7F6 /* img02.jpg */; };
 		C21C607E192E141100C3B7F6 /* img03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C21C607B192E141100C3B7F6 /* img03.jpg */; };
-		C21C6080192E146400C3B7F6 /* READEME.MD in Resources */ = {isa = PBXBuildFile; fileRef = C21C607F192E146400C3B7F6 /* READEME.MD */; };
+		C21C6080192E146400C3B7F6 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = C21C607F192E146400C3B7F6 /* README.MD */; };
 		C21C6082192E2CC300C3B7F6 /* myImg01.png in Resources */ = {isa = PBXBuildFile; fileRef = C21C6081192E2CC300C3B7F6 /* myImg01.png */; };
 		C21C6084192E34C100C3B7F6 /* myImg02.png in Resources */ = {isa = PBXBuildFile; fileRef = C21C6083192E34C100C3B7F6 /* myImg02.png */; };
 		C21C6086192E3FD600C3B7F6 /* myImg03.png in Resources */ = {isa = PBXBuildFile; fileRef = C21C6085192E3FD600C3B7F6 /* myImg03.png */; };
@@ -58,7 +58,7 @@
 		C21C6079192E141100C3B7F6 /* img01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img01.jpg; sourceTree = "<group>"; };
 		C21C607A192E141100C3B7F6 /* img02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img02.jpg; sourceTree = "<group>"; };
 		C21C607B192E141100C3B7F6 /* img03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img03.jpg; sourceTree = "<group>"; };
-		C21C607F192E146400C3B7F6 /* READEME.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = READEME.MD; sourceTree = SOURCE_ROOT; };
+		C21C607F192E146400C3B7F6 /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.MD; sourceTree = SOURCE_ROOT; };
 		C21C6081192E2CC300C3B7F6 /* myImg01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImg01.png; sourceTree = "<group>"; };
 		C21C6083192E34C100C3B7F6 /* myImg02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImg02.png; sourceTree = "<group>"; };
 		C21C6085192E3FD600C3B7F6 /* myImg03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImg03.png; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				C21C605A192E138000C3B7F6 /* CFAppDelegate.m */,
 				C21C605C192E138000C3B7F6 /* Images.xcassets */,
 				C21C6051192E138000C3B7F6 /* Supporting Files */,
-				C21C607F192E146400C3B7F6 /* READEME.MD */,
+				C21C607F192E146400C3B7F6 /* README.MD */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 				C21C6055192E138000C3B7F6 /* InfoPlist.strings in Resources */,
 				C21C605D192E138000C3B7F6 /* Images.xcassets in Resources */,
 				C21C6084192E34C100C3B7F6 /* myImg02.png in Resources */,
-				C21C6080192E146400C3B7F6 /* READEME.MD in Resources */,
+				C21C6080192E146400C3B7F6 /* README.MD in Resources */,
 				C21C607C192E141100C3B7F6 /* img01.jpg in Resources */,
 				C21C6086192E3FD600C3B7F6 /* myImg03.png in Resources */,
 				C21C607D192E141100C3B7F6 /* img02.jpg in Resources */,
