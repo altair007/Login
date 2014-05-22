@@ -25,7 +25,7 @@
 		C21C6082192E2CC300C3B7F6 /* myImg01.png in Resources */ = {isa = PBXBuildFile; fileRef = C21C6081192E2CC300C3B7F6 /* myImg01.png */; };
 		C21C6084192E34C100C3B7F6 /* myImg02.png in Resources */ = {isa = PBXBuildFile; fileRef = C21C6083192E34C100C3B7F6 /* myImg02.png */; };
 		C21C6086192E3FD600C3B7F6 /* myImg03.png in Resources */ = {isa = PBXBuildFile; fileRef = C21C6085192E3FD600C3B7F6 /* myImg03.png */; };
-		C21C608A192E444100C3B7F6 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C21C6089192E444100C3B7F6 /* readme.md */; };
+		C21C6090192E460E00C3B7F6 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C21C608F192E460E00C3B7F6 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		C21C6081192E2CC300C3B7F6 /* myImg01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImg01.png; sourceTree = "<group>"; };
 		C21C6083192E34C100C3B7F6 /* myImg02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImg02.png; sourceTree = "<group>"; };
 		C21C6085192E3FD600C3B7F6 /* myImg03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImg03.png; sourceTree = "<group>"; };
-		C21C6089192E444100C3B7F6 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = SOURCE_ROOT; };
+		C21C608F192E460E00C3B7F6 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 				C21C605A192E138000C3B7F6 /* CFAppDelegate.m */,
 				C21C605C192E138000C3B7F6 /* Images.xcassets */,
 				C21C6051192E138000C3B7F6 /* Supporting Files */,
-				C21C6089192E444100C3B7F6 /* readme.md */,
+				C21C608F192E460E00C3B7F6 /* readme.md */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C21C6082192E2CC300C3B7F6 /* myImg01.png in Resources */,
-				C21C608A192E444100C3B7F6 /* readme.md in Resources */,
+				C21C6090192E460E00C3B7F6 /* readme.md in Resources */,
 				C21C6055192E138000C3B7F6 /* InfoPlist.strings in Resources */,
 				C21C605D192E138000C3B7F6 /* Images.xcassets in Resources */,
 				C21C6084192E34C100C3B7F6 /* myImg02.png in Resources */,
@@ -470,6 +470,7 @@
 				C21C6075192E138000C3B7F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C21C6076192E138000C3B7F6 /* Build configuration list for PBXNativeTarget "LoginTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +479,7 @@
 				C21C6078192E138000C3B7F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
