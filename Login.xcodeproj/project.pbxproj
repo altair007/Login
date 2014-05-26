@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C216B3CA19321B86002ECA95 /* 2014-5-25homeWorkOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C216B3C819321B86002ECA95 /* 2014-5-25homeWorkOne.jpg */; };
+		C216B3CB19321B86002ECA95 /* 2014-5-25homeWorkTwo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C216B3C919321B86002ECA95 /* 2014-5-25homeWorkTwo.jpg */; };
 		C21C604B192E138000C3B7F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21C604A192E138000C3B7F6 /* Foundation.framework */; };
 		C21C604D192E138000C3B7F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21C604C192E138000C3B7F6 /* CoreGraphics.framework */; };
 		C21C604F192E138000C3B7F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21C604E192E138000C3B7F6 /* UIKit.framework */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C216B3C819321B86002ECA95 /* 2014-5-25homeWorkOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2014-5-25homeWorkOne.jpg"; sourceTree = "<group>"; };
+		C216B3C919321B86002ECA95 /* 2014-5-25homeWorkTwo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2014-5-25homeWorkTwo.jpg"; sourceTree = "<group>"; };
 		C21C6047192E138000C3B7F6 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21C604A192E138000C3B7F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C21C604C192E138000C3B7F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +125,8 @@
 		C21C6050192E138000C3B7F6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C216B3C819321B86002ECA95 /* 2014-5-25homeWorkOne.jpg */,
+				C216B3C919321B86002ECA95 /* 2014-5-25homeWorkTwo.jpg */,
 				C21C6085192E3FD600C3B7F6 /* myImg03.png */,
 				C21C6083192E34C100C3B7F6 /* myImg02.png */,
 				C21C6081192E2CC300C3B7F6 /* myImg01.png */,
@@ -241,8 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C216B3CA19321B86002ECA95 /* 2014-5-25homeWorkOne.jpg in Resources */,
 				C21C6082192E2CC300C3B7F6 /* myImg01.png in Resources */,
 				C21C6090192E460E00C3B7F6 /* readme.md in Resources */,
+				C216B3CB19321B86002ECA95 /* 2014-5-25homeWorkTwo.jpg in Resources */,
 				C21C6055192E138000C3B7F6 /* InfoPlist.strings in Resources */,
 				C21C605D192E138000C3B7F6 /* Images.xcassets in Resources */,
 				C21C6084192E34C100C3B7F6 /* myImg02.png in Resources */,
