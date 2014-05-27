@@ -46,7 +46,6 @@
             [self addSubview:obj];
         }];
     }
-    self.backgroundColor = [UIColor redColor];
     return self;
 }
 
