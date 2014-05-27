@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#define EMAIL @"1178328901@qq.com"
+#import "CFLogIn.h"
 
 @interface CFAppDelegate : UIResponder <UIApplicationDelegate, UITextFieldDelegate>
-@property (retain, nonatomic) UIWindow *window;
-@property (retain, nonatomic) NSMutableDictionary * textFieldsOfSignIn; //!< 存储注册页面的文本框.
-@property (retain, nonatomic) UITextField * emailField; //!< 找回密码页面的文本框.
+@property (retain, nonatomic) UIWindow * window;
+
+#pragma mark - 实例方法
+/**
+ *  释放实例对象
+ */
+-(void)dealloc;
 @end
