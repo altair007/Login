@@ -7,5 +7,20 @@
 //
 
 #import "CFLoginView.h"
+#import "CFLTView.h"
+
 @implementation CFLoginView
+-(NSDictionary *)defaultViews
+{
+    // 获取本视图控件信息
+    NSDictionary * dict = [super defaultViews];
+    
+    // 个性化设置
+    // 密码和确认密码采用密文输入
+    CFLTView * pwdLTView = [dict objectForKey: @"密码"];;
+    pwdLTView.textField.secureTextEntry = YES;
+    
+    return dict;
+}
+
 @end

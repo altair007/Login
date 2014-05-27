@@ -11,7 +11,7 @@
 /**
  *  含有一个文本和文本框的组合
  */
-@interface CFLTView : UIView
+@interface CFLTView : UIView <UITextFieldDelegate>
 #pragma mark - 属性
 @property (retain, nonatomic) UILabel * label; //!< 文本标签
 @property (retain, nonatomic) UITextField * textField; //!< 文本框

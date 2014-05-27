@@ -7,14 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CFLogIn.h"
 
 @interface CFAppDelegate : UIResponder <UIApplicationDelegate, UITextFieldDelegate>
 @property (retain, nonatomic) UIWindow * window;
-
-#pragma mark - 实例方法
-/**
- *  释放实例对象
- */
--(void)dealloc;
 @end

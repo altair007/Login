@@ -19,18 +19,15 @@
 #pragma mark - 初始化
 - (instancetype) initWithFrame: (CGRect)frame
                       delegate: (id) aDelegate
-                     superView: (UIView *) aView
                   infoOfLables: (NSArray *) infoOfLables
                  infoOfButtons: (NSArray *) infoOfButtons
 {
-    if (nil == aView || nil == aDelegate ||
+    if (nil == aDelegate ||
         nil == infoOfButtons || nil == infoOfButtons) {
         return nil;
     }
     
     if (self = [super initWithFrame:frame]) {
-        // 父类属性初始化
-        self.superView = aView;
         
         // 代理初始化
         self.delegate = aDelegate;
@@ -48,12 +45,23 @@
         [self.dictOfSubViews enumerateKeysAndObjectsUsingBlock:^(id key, UIView * obj, BOOL *stop) {
             [self addSubview:obj];
         }];
-        
-        self.backgroundColor = [UIColor whiteColor];
-        [self.superView addSubview: self];
     }
-    
+    self.backgroundColor = [UIColor redColor];
     return self;
+}
+
+#pragma mark -重写方法
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    // 回收键盘
+    // !!!: 方法很笨:回收所有输入框的键盘!(虽然代码很少!)
+    [self.dictOfSubViews enumerateKeysAndObjectsUsingBlock:^(id key, CFLTView * obj, BOOL *stop) {
+        if ([obj isKindOfClass:[CFLTView class]]) {
+            [obj.textField resignFirstResponder];
+        }
+    }];
+    
 }
 
 #pragma mark - 实例方法
@@ -90,9 +98,6 @@
         // !!!: 应该同时传入代理对象和方法名selector.
         [tempButton addTarget:self.delegate action:@selector(didClickButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [dictOfViews setObject:tempButton forKey:[tempButton titleForState:UIControlStateNormal]];
-        
-        // !!!: 临时添加设置颜色!
-        tempButton.backgroundColor = [UIColor blueColor];
         
         baseRectOfButtons = CGRectMake(baseRectOfButtons.origin.x + baseRectOfButtons.size.width + spaceOfButtons, baseRectOfButtons.origin.y, baseRectOfButtons.size.width, baseRectOfButtons.size.height);
     }];

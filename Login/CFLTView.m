@@ -20,13 +20,13 @@
         CGRect rectOfLabel = CGRectMake(0, 0, self.frame.size.width * 0.3, self.frame.size.height);
         UILabel * tempLabel = [[UILabel alloc] initWithFrame:rectOfLabel];
         self.label = tempLabel;
-        self.label.backgroundColor = [UIColor redColor];
         [tempLabel release];
         
         CGRect rectOfTextField = CGRectMake(rectOfLabel.size.width, 0, self.frame.size.width - rectOfLabel.size.width, rectOfLabel.size.height);
         UITextField * tempTextField = [[UITextField alloc] initWithFrame:rectOfTextField];
         self.textField = tempTextField;
         self.textField.borderStyle = UITextBorderStyleRoundedRect;
+        self.textField.delegate = self;
         [tempTextField release];
         
         [self addSubview:self.label];
@@ -43,4 +43,14 @@
     [super dealloc];
 }
 
+#pragma mark - 协议方法
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+}
 @end

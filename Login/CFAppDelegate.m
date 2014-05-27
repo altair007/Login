@@ -7,9 +7,11 @@
 //
 
 #import "CFAppDelegate.h"
+#import "CFLogInViewController.h"
 #import "CFLoginView.h"
 #import "CFRegistView.h"
 #import "CFGetPasswordView.h"
+
 
 @implementation CFAppDelegate
 
@@ -28,24 +30,22 @@
     [self.window makeKeyAndVisible];
     
     // 开始登陆吧
+    CFLogInViewController * controller;
+    controller = [[CFLogInViewController alloc] init];
     
-    CFLogIn * login;
-    login = [[CFLogIn alloc] initWithSuperView:self.window];
+    CFLoginView * aLoginView = [[CFLoginView alloc] initWithFrame:self.window.frame delegate:controller infoOfLables:@[@"用户名", @"密码"] infoOfButtons:@[@"登录", @"找回密码", @"新人加入"]];
     
+    CFRegistView * aRegistView = [[CFRegistView alloc] initWithFrame:self.window.frame delegate:controller infoOfLables:@[@"用户名", @"密码", @"确认密码", @"手机号", @"邮箱", @"住址"] infoOfButtons:@[@"注册", @"返回"]];
     
-    CFLoginView * aLoginView = [[CFLoginView alloc] initWithFrame:self.window.frame delegate:login superView:login.superView infoOfLables:@[@"用户名", @"密码"] infoOfButtons:@[@"登录", @"找回密码", @"新人加入"]];
+    CFGetPasswordView * aGetPasswordView = [[CFGetPasswordView alloc] initWithFrame:self.window.frame delegate:controller infoOfLables:@[@"邮箱"] infoOfButtons:@[@"找回", @"返回"]];
     
-    CFRegistView * aRegistView = [[CFRegistView alloc] initWithFrame:self.window.frame delegate:login superView:login.superView infoOfLables:@[@"用户名", @"密码", @"确认密码", @"手机号", @"邮箱", @"住址"] infoOfButtons:@[@"注册", @"返回"]];
+    controller.loginView = aLoginView;
+    controller.registView = aRegistView;
+    controller.getPasswordView = aGetPasswordView;
     
-    CFGetPasswordView * aGetPasswordView = [[CFGetPasswordView alloc] initWithFrame:self.window.frame delegate:login superView:login.superView infoOfLables:@[@"邮箱"] infoOfButtons:@[@"找回", @"返回"]];
+    self.window.rootViewController = controller;
     
-    login.loginView = aLoginView;
-    login.registView = aRegistView;
-    login.getPasswordView = aGetPasswordView;
-    
-    [login start];
-    
-    [login release];
+    [controller release];
     [aLoginView release];
     [aRegistView release];
     [aGetPasswordView release];

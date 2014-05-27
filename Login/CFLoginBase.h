@@ -10,7 +10,6 @@
 
 @interface CFLoginBase : UIView
 #pragma mark - 属性
-@property (assign, nonatomic) UIView * superView; //!< 父视图.
 @property (retain, nonatomic) NSDictionary * dictOfSubViews;//!< 子视图字典
 @property (retain, nonatomic) id delegate; //!< 代理
 @property (retain, nonatomic, readonly) NSArray * infoOfLables; //!< 存储标签控件文本的数组.
@@ -30,7 +29,6 @@
  */
 - (instancetype) initWithFrame: (CGRect)frame
                       delegate: (id) aDelegate
-                     superView: (UIView *) aView
                   infoOfLables: (NSArray *) infoOfLabels
                  infoOfButtons: (NSArray *) infoOfButtons;
 

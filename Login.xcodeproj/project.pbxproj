@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2168D171934BB7D00DB8351 /* CFLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2168D161934BB7D00DB8351 /* CFLogInViewController.m */; };
 		C216B3CA19321B86002ECA95 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C216B3C819321B86002ECA95 /* 02.jpg */; };
 		C216B3CB19321B86002ECA95 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C216B3C919321B86002ECA95 /* 03.jpg */; };
 		C21C604B192E138000C3B7F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21C604A192E138000C3B7F6 /* Foundation.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2168D151934BB7D00DB8351 /* CFLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLogInViewController.h; sourceTree = "<group>"; };
+		C2168D161934BB7D00DB8351 /* CFLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLogInViewController.m; sourceTree = "<group>"; };
 		C216B3C819321B86002ECA95 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
 		C216B3C919321B86002ECA95 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
 		C21C6047192E138000C3B7F6 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,10 +138,12 @@
 			children = (
 				C2F537C919335F5800E3A6A9 /* CFLogIn.h */,
 				C2F537CA19335F5800E3A6A9 /* CFLogIn.m */,
-				C2F537D01933649900E3A6A9 /* CFRegistView.m */,
+				C2168D151934BB7D00DB8351 /* CFLogInViewController.h */,
+				C2168D161934BB7D00DB8351 /* CFLogInViewController.m */,
 				C2F537D81933850700E3A6A9 /* CFLoginBase.h */,
 				C2F537D91933850700E3A6A9 /* CFLoginBase.m */,
 				C2F537CF1933649900E3A6A9 /* CFRegistView.h */,
+				C2F537D01933649900E3A6A9 /* CFRegistView.m */,
 				C2F537CC1933645A00E3A6A9 /* CFLoginView.h */,
 				C2F537CD1933645A00E3A6A9 /* CFLoginView.m */,
 				C2F537D2193364C500E3A6A9 /* CFGetPasswordView.h */,
@@ -292,6 +297,7 @@
 				C2F537CE1933645A00E3A6A9 /* CFLoginView.m in Sources */,
 				C2F537D4193364C500E3A6A9 /* CFGetPasswordView.m in Sources */,
 				C2F537DA1933850700E3A6A9 /* CFLoginBase.m in Sources */,
+				C2168D171934BB7D00DB8351 /* CFLogInViewController.m in Sources */,
 				C21C605B192E138000C3B7F6 /* CFAppDelegate.m in Sources */,
 				C2F537CB19335F5800E3A6A9 /* CFLogIn.m in Sources */,
 			);

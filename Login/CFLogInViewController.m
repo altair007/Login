@@ -1,45 +1,75 @@
 //
-//  CFLogIn.m
+//  CFLogInViewController.m
 //  Login
 //
-//  Created by   颜风 on 14-5-26.
+//  Created by   颜风 on 14-5-27.
 //  Copyright (c) 2014年 Shadow. All rights reserved.
 //
 
-#import "CFLogIn.h"
+#import "CFLogInViewController.h"
 #import "CFLoginView.h"
 #import "CFRegistView.h"
 #import "CFGetPasswordView.h"
 #import "CFLTView.h"
 
-@implementation CFLogIn
-#pragma mark - 便利初始化
-- (instancetype) initWithSuperView:(UIView *) aSuperView
+@interface CFLogInViewController ()
+
+@end
+
+@implementation CFLogInViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if (nil == aSuperView) {
-        return nil;
-    }
-    
-    if (self = [super init]) {
-        self.superView = aSuperView;
-        
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
         NSMutableDictionary * tempInfoOfUsers = [[NSMutableDictionary alloc] initWithCapacity:42];
         self.infoOfUsers = tempInfoOfUsers;
         [tempInfoOfUsers release];
-        
     }
-    
     return self;
 }
 
-#pragma mark - 实例方法
-- (void) start
+- (void)viewDidLoad
 {
-    [self.superView bringSubviewToFront:self.loginView];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.view = self.loginView;
 }
+
+- (BOOL)shouldAutorotate
+{
+    // 注册视图关闭随屏幕转动.
+    if (self.view == self.registView) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+#pragma mark - 实例方法
 
 - (void) didClickButtonAction: (UIButton *) aButton
 {
+    // 回收键盘
+    [self recycleKeyboard];
+    
     // 定义一个字典,存储按钮文本框与对应的响应方法.相当于在做路由.
     NSDictionary * dictOfButtonMethod = @{@"注册": @"didClickRegistButtonAction:",
                                           @"返回": @"didClickBackButtonAction:",
@@ -50,7 +80,7 @@
     
     // 获取按钮文本信息
     NSString * buttonTitle = [aButton titleForState: UIControlStateNormal];
-
+    
     [dictOfButtonMethod enumerateKeysAndObjectsUsingBlock:^(NSString * key, id obj, BOOL *stop) {
         if([key isEqualToString: buttonTitle]){
             if ([self respondsToSelector:NSSelectorFromString(obj)]) {
@@ -101,26 +131,30 @@
     [alertView show];
     [alertView release];
     
-    // 转向登录界面
-    [self.superView bringSubviewToFront:self.loginView];
+    // 清空页面登陆页面,转向登录界面
+    [self emptyTextField];
+    self.view = self.loginView;
     
 }
 
 - (void) didClickBackButtonAction:(UIButton *)aButton
 {
     // 点击返回按钮,返回登录界面.
-    [self.superView bringSubviewToFront:self.loginView];
+        [self emptyTextField];
+    self.view = self.loginView;
 }
 
 - (void)didClickNewRegistButtonAction:(UIButton *)aButton
 {
     // 点击"新人加入"按钮,前往注册页面
-    [self.superView bringSubviewToFront: self.registView];
+        [self emptyTextField];
+    self.view = self.registView;
 }
 - (void) didClickRetrievePwdButtonAction: (UIButton *)aButton
 {
     // 点击"找回密码按钮",前往找回密码页面
-    [self.superView bringSubviewToFront: self.getPasswordView];
+    [self emptyTextField];
+    self.view = self.getPasswordView;
 }
 
 - (void) didClickLogInButtonAction: (UIButton *) aButton
@@ -182,15 +216,15 @@
     if (isEmailAddress) {
         alertView.message = @"重置密码邮件已经发送您的邮箱!即将转到登录页面!";
         [alertView show];
-        [self.superView bringSubviewToFront: self.loginView];
+        self.view =  self.loginView;
         return;
     }
     
     [alertView show];
 }
+
 -(void)dealloc
 {
-    self.superView = nil;
     self.loginView = nil;
     self.registView = nil;
     self.getPasswordView = nil;
@@ -198,4 +232,30 @@
     
     [super dealloc];
 }
+
+#pragma mark - 工具方法
+- (void) recycleKeyboard
+{
+    if ([self.view isKindOfClass:[CFLoginBase class]]) {
+        [self.loginView.dictOfSubViews
+         enumerateKeysAndObjectsUsingBlock:^(id key, CFLTView * obj, BOOL *stop) {
+            if ([obj isKindOfClass:[CFLTView class]]) {
+                [obj.textField resignFirstResponder];
+            }
+        }];
+    }
+}
+
+- (void) emptyTextField
+{
+    if ([self.view isKindOfClass:[CFLoginBase class]]) {
+        [self.loginView.dictOfSubViews
+         enumerateKeysAndObjectsUsingBlock:^(id key, CFLTView * obj, BOOL *stop) {
+             if ([obj isKindOfClass:[CFLTView class]]) {
+                 obj.textField.text = nil;
+             }
+         }];
+    }
+}
+
 @end
