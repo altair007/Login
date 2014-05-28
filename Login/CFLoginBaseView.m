@@ -1,21 +1,21 @@
 //
-//  CFLoginBase.m
+//  CFLoginBaseView.h
 //  Login
 //
 //  Created by   颜风 on 14-5-26.
 //  Copyright (c) 2014年 Shadow. All rights reserved.
 //
 
-#import "CFLoginBase.h"
+#import "CFLoginBaseView.h"
 #import "CFLTView.h"
-#import "CFLogIn.h"
+#import "CFLogInViewController.h"
 
-@interface CFLoginBase ()
+@interface CFLoginBaseView ()
 @property (retain, nonatomic, readwrite) NSArray * infoOfLables;
 @property (retain, nonatomic, readwrite) NSArray * infoOfButtons;
 @end
 
-@implementation CFLoginBase
+@implementation CFLoginBaseView
 #pragma mark - 初始化
 - (instancetype) initWithFrame: (CGRect)frame
                       delegate: (id) aDelegate
@@ -28,6 +28,8 @@
     }
     
     if (self = [super initWithFrame:frame]) {
+        // 设置默认白色背景色
+        self.backgroundColor = [UIColor whiteColor];
         
         // 代理初始化
         self.delegate = aDelegate;
@@ -54,13 +56,11 @@
 {
     [super layoutSubviews];
     // 回收键盘
-    // !!!: 方法很笨:回收所有输入框的键盘!(虽然代码很少!)
     [self.dictOfSubViews enumerateKeysAndObjectsUsingBlock:^(id key, CFLTView * obj, BOOL *stop) {
         if ([obj isKindOfClass:[CFLTView class]]) {
             [obj.textField resignFirstResponder];
         }
     }];
-    
 }
 
 #pragma mark - 实例方法
@@ -94,7 +94,6 @@
         tempButton = [UIButton buttonWithType:UIButtonTypeSystem];
         tempButton.frame = baseRectOfButtons;
         [tempButton setTitle:obj forState:UIControlStateNormal];
-        // !!!: 应该同时传入代理对象和方法名selector.
         [tempButton addTarget:self.delegate action:@selector(didClickButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [dictOfViews setObject:tempButton forKey:[tempButton titleForState:UIControlStateNormal]];
         

@@ -39,11 +39,12 @@
     
     CFGetPasswordView * aGetPasswordView = [[CFGetPasswordView alloc] initWithFrame:self.window.frame delegate:controller infoOfLables:@[@"邮箱"] infoOfButtons:@[@"找回", @"返回"]];
     
+    
     controller.loginView = aLoginView;
     controller.registView = aRegistView;
     controller.getPasswordView = aGetPasswordView;
-    
     self.window.rootViewController = controller;
+    
     
     [controller release];
     [aLoginView release];

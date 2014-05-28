@@ -27,4 +27,11 @@
  *  清空页面文本编辑框的内容
  */
 - (void) emptyTextField;
+
+/**
+ *  按钮
+ *
+ *  @param aButton 点击的按钮
+ */
+- (void) didClickButtonAction:(UIButton *) aButton;
 @end

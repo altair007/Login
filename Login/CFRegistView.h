@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CFLoginBase.h"
+#import "CFLoginBaseView.h"
 
 /**
  *  注册页面
  */
-@interface CFRegistView : CFLoginBase
+@interface CFRegistView : CFLoginBaseView
 @end

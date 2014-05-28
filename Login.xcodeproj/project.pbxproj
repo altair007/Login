@@ -24,12 +24,11 @@
 		C21C6070192E138000C3B7F6 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C21C606F192E138000C3B7F6 /* LoginTests.m */; };
 		C21C6090192E460E00C3B7F6 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C21C608F192E460E00C3B7F6 /* readme.md */; };
 		C2F537C819335D5B00E3A6A9 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F537C719335D5B00E3A6A9 /* 01.png */; };
-		C2F537CB19335F5800E3A6A9 /* CFLogIn.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F537CA19335F5800E3A6A9 /* CFLogIn.m */; };
 		C2F537CE1933645A00E3A6A9 /* CFLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F537CD1933645A00E3A6A9 /* CFLoginView.m */; };
 		C2F537D11933649900E3A6A9 /* CFRegistView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F537D01933649900E3A6A9 /* CFRegistView.m */; };
 		C2F537D4193364C500E3A6A9 /* CFGetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F537D3193364C500E3A6A9 /* CFGetPasswordView.m */; };
 		C2F537D719337A0B00E3A6A9 /* CFLTView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F537D619337A0B00E3A6A9 /* CFLTView.m */; };
-		C2F537DA1933850700E3A6A9 /* CFLoginBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F537D91933850700E3A6A9 /* CFLoginBase.m */; };
+		C2F537DA1933850700E3A6A9 /* CFLoginBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F537D91933850700E3A6A9 /* CFLoginBaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +64,6 @@
 		C21C606F192E138000C3B7F6 /* LoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginTests.m; sourceTree = "<group>"; };
 		C21C608F192E460E00C3B7F6 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = SOURCE_ROOT; };
 		C2F537C719335D5B00E3A6A9 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
-		C2F537C919335F5800E3A6A9 /* CFLogIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLogIn.h; sourceTree = "<group>"; };
-		C2F537CA19335F5800E3A6A9 /* CFLogIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLogIn.m; sourceTree = "<group>"; };
 		C2F537CC1933645A00E3A6A9 /* CFLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLoginView.h; sourceTree = "<group>"; };
 		C2F537CD1933645A00E3A6A9 /* CFLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLoginView.m; sourceTree = "<group>"; };
 		C2F537CF1933649900E3A6A9 /* CFRegistView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRegistView.h; sourceTree = "<group>"; };
@@ -75,8 +72,8 @@
 		C2F537D3193364C500E3A6A9 /* CFGetPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFGetPasswordView.m; sourceTree = "<group>"; };
 		C2F537D519337A0B00E3A6A9 /* CFLTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLTView.h; sourceTree = "<group>"; };
 		C2F537D619337A0B00E3A6A9 /* CFLTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLTView.m; sourceTree = "<group>"; };
-		C2F537D81933850700E3A6A9 /* CFLoginBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLoginBase.h; sourceTree = "<group>"; };
-		C2F537D91933850700E3A6A9 /* CFLoginBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLoginBase.m; sourceTree = "<group>"; };
+		C2F537D81933850700E3A6A9 /* CFLoginBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLoginBaseView.h; sourceTree = "<group>"; };
+		C2F537D91933850700E3A6A9 /* CFLoginBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLoginBaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,12 +133,10 @@
 		C21C6050192E138000C3B7F6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C2F537C919335F5800E3A6A9 /* CFLogIn.h */,
-				C2F537CA19335F5800E3A6A9 /* CFLogIn.m */,
 				C2168D151934BB7D00DB8351 /* CFLogInViewController.h */,
 				C2168D161934BB7D00DB8351 /* CFLogInViewController.m */,
-				C2F537D81933850700E3A6A9 /* CFLoginBase.h */,
-				C2F537D91933850700E3A6A9 /* CFLoginBase.m */,
+				C2F537D81933850700E3A6A9 /* CFLoginBaseView.h */,
+				C2F537D91933850700E3A6A9 /* CFLoginBaseView.m */,
 				C2F537CF1933649900E3A6A9 /* CFRegistView.h */,
 				C2F537D01933649900E3A6A9 /* CFRegistView.m */,
 				C2F537CC1933645A00E3A6A9 /* CFLoginView.h */,
@@ -296,10 +291,9 @@
 				C2F537D719337A0B00E3A6A9 /* CFLTView.m in Sources */,
 				C2F537CE1933645A00E3A6A9 /* CFLoginView.m in Sources */,
 				C2F537D4193364C500E3A6A9 /* CFGetPasswordView.m in Sources */,
-				C2F537DA1933850700E3A6A9 /* CFLoginBase.m in Sources */,
+				C2F537DA1933850700E3A6A9 /* CFLoginBaseView.m in Sources */,
 				C2168D171934BB7D00DB8351 /* CFLogInViewController.m in Sources */,
 				C21C605B192E138000C3B7F6 /* CFAppDelegate.m in Sources */,
-				C2F537CB19335F5800E3A6A9 /* CFLogIn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

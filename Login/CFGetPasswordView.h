@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CFLoginBase.h"
+#import "CFLoginBaseView.h"
 
-@interface CFGetPasswordView : CFLoginBase
+@interface CFGetPasswordView : CFLoginBaseView
 @end

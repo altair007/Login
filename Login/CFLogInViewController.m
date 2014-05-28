@@ -63,6 +63,28 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - 重写方法
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    CFLoginBaseView * base = (CFLoginBaseView *)self.view;
+    [base.dictOfSubViews enumerateKeysAndObjectsUsingBlock:^(id key, UIView * obj, BOOL *stop) {
+        
+        CGPoint centerNew = obj.center; //!< 存储新的中心点.
+        
+        // 屏幕旋转:当从左移动到上,再移动到右,系统会认为是从左顺时针移到右.即当前位置是UIDeviceOrientationLandscapeLeft,将要旋转的方向是UIDeviceOrientationLandscapeRight;反之,依然.此时不需要做任何处理.
+        
+        // 一般情况,即旋转时没有屏幕倒立(home在下)的情况!
+        if ( ! ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeLeft && toInterfaceOrientation == UIDeviceOrientationLandscapeRight) &&
+            ! (toInterfaceOrientation  == UIDeviceOrientationLandscapeLeft && [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationLandscapeRight) ) {
+            centerNew = CGPointMake(obj.center.x + (self.view.bounds.size.height - self.view.bounds.size.width) / 2, obj.center.y);
+        }
+        
+        // 设置新的中心点
+        obj.center = centerNew;
+        
+    }];
+}
+
 #pragma mark - 实例方法
 
 - (void) didClickButtonAction: (UIButton *) aButton
@@ -236,7 +258,7 @@
 #pragma mark - 工具方法
 - (void) recycleKeyboard
 {
-    if ([self.view isKindOfClass:[CFLoginBase class]]) {
+    if ([self.view isKindOfClass:[CFLoginBaseView class]]) {
         [self.loginView.dictOfSubViews
          enumerateKeysAndObjectsUsingBlock:^(id key, CFLTView * obj, BOOL *stop) {
             if ([obj isKindOfClass:[CFLTView class]]) {
@@ -248,7 +270,7 @@
 
 - (void) emptyTextField
 {
-    if ([self.view isKindOfClass:[CFLoginBase class]]) {
+    if ([self.view isKindOfClass:[CFLoginBaseView class]]) {
         [self.loginView.dictOfSubViews
          enumerateKeysAndObjectsUsingBlock:^(id key, CFLTView * obj, BOOL *stop) {
              if ([obj isKindOfClass:[CFLTView class]]) {

@@ -1,5 +1,5 @@
 //
-//  CFLoginBase.h
+//  CFLoginBaseView.h
 //  Login
 //
 //  Created by   颜风 on 14-5-26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CFLoginBase : UIView
+@interface CFLoginBaseView : UIView
 #pragma mark - 属性
 @property (retain, nonatomic) NSDictionary * dictOfSubViews;//!< 子视图字典
 @property (retain, nonatomic) id delegate; //!< 代理
