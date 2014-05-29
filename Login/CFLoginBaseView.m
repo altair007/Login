@@ -95,6 +95,10 @@
         tempButton.frame = baseRectOfButtons;
         [tempButton setTitle:obj forState:UIControlStateNormal];
         [tempButton addTarget:self.delegate action:@selector(didClickButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        // 给button添加文本自适应!
+        tempButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+ 
         [dictOfViews setObject:tempButton forKey:[tempButton titleForState:UIControlStateNormal]];
         
         baseRectOfButtons = CGRectMake(baseRectOfButtons.origin.x + baseRectOfButtons.size.width + spaceOfButtons, baseRectOfButtons.origin.y, baseRectOfButtons.size.width, baseRectOfButtons.size.height);
